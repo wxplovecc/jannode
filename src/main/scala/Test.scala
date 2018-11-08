@@ -24,7 +24,7 @@ object Test {
     val spark = SparkSession.builder().master("local").appName("case class test").getOrCreate()
     val sqlContext = spark.sqlContext;
     import spark.implicits._
-    spark.sparkContext.textFile("D:\\MyConfiguration\\wxp4532\\Desktop\\test1.txt")
+    spark.sparkContext.textFile("D:\\test1.txt")
       .map(x => {
         (x.split("&")(0).split(" "), x.split("&")(1).split(" "))
       }).map(x => {
